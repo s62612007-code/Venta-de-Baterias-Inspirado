@@ -79,11 +79,10 @@ node test-sitio.js
 
 | URL | Uso |
 |-----|-----|
-| https://hondabaterias.com | Dominio principal (A) |
-| https://hondabateriascali.com | Dominio alterno (B) → redirige al A |
+| https://hondabateriascali.com | Dominio oficial |
 | https://s62612007-code.github.io/Venta-de-Baterias-Inspirado/ | GitHub Pages |
 
-Configuración DNS detallada en [DOMINIO.md](DOMINIO.md).
+Configuración DNS en [DOMINIO.md](DOMINIO.md).
 
 ---
 
