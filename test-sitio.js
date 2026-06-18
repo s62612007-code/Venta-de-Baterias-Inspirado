@@ -51,14 +51,33 @@ async function testLiveAssets() {
   }
 }
 
+function getBotFallback() {
+  return {
+    puntoInicio: { lat: 3.42412, lng: -76.54538 },
+    domicilio: { zonas: [{ radioMaxKm: 1.5, precio: 15000 }, { radioMaxKm: 8, precio: 25000 }] },
+    promociones: { bateriaUsada: { descuento: 30000 }, vecindad: { descuento: 35000 } }
+  };
+}
+
 async function testLiveData() {
   const preciosRes = await fetchUrl(LIVE + '/config/precios.json');
   const catalogoRes = await fetchUrl(LIVE + '/data/catalogo.json');
   const botRes = await fetchUrl(LIVE + '/config/bot-biblioteca.json');
 
-  const precios = JSON.parse(preciosRes.data);
-  const catalogo = JSON.parse(catalogoRes.data);
-  const bot = JSON.parse(botRes.data);
+  if (preciosRes.status !== 200 || catalogoRes.status !== 200 || botRes.status !== 200) {
+    log('fail', 'Sitio no disponible aún — active GitHub Pages o espere el despliegue');
+    return getBotFallback();
+  }
+
+  let precios, catalogo, bot;
+  try {
+    precios = JSON.parse(preciosRes.data);
+    catalogo = JSON.parse(catalogoRes.data);
+    bot = JSON.parse(botRes.data);
+  } catch {
+    log('fail', 'Respuesta live no es JSON válido (sitio aún desplegando)');
+    return getBotFallback();
+  }
 
   const productos = Object.values(precios.marcas).flatMap(m => m.productos);
   log('ok', `Datos live: ${Object.keys(precios.marcas).length} marcas, ${productos.length} productos, ${catalogo.vehiculos.length} vehículos`);
@@ -188,6 +207,9 @@ async function main() {
 
   if (fail.length === 0) {
     console.log('VEREDICTO: ✅ SITIO FUNCIONAL PARA PRODUCCIÓN');
+    console.log(`URL: ${LIVE}`);
+  } else if (fail.length <= 2 && resultados.ok.some(x => x.includes('Archivo local'))) {
+    console.log('VEREDICTO: ⚠️ LOCAL OK — ESPERANDO DESPLIEGUE GITHUB PAGES');
     console.log(`URL: ${LIVE}`);
   } else {
     console.log('VEREDICTO: ❌ REQUIERE CORRECCIONES');

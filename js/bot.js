@@ -283,7 +283,10 @@ const PilaBot = {
     const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}&limit=1&countrycodes=co`;
 
     const res = await fetch(url, {
-      headers: { 'Accept-Language': 'es' }
+      headers: {
+        'Accept-Language': 'es',
+        'User-Agent': 'HondaBaterias-PilaBot/1.0 (contacto: s62612007@gmail.com)'
+      }
     });
 
     if (!res.ok) throw new Error('Geocoding falló');

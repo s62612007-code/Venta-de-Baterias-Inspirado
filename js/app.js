@@ -36,7 +36,7 @@ const App = {
       this.renderCatalogoCompleto();
     } catch (error) {
       console.error('Error cargando datos:', error);
-      this.showError('No se pudieron cargar los datos. Abra index.html desde un servidor local (Live Server) o ejecute: python3 -m http.server');
+      this.showError('No se pudieron cargar los datos. Verifique su conexión o recargue la página.');
     }
   },
 
