@@ -1,0 +1,22 @@
+{
+  "nombre": "Honda Baterías",
+  "slogan": "Energía confiable para tu camino.",
+  "ciudad": "Cali",
+  "departamento": "Valle del Cauca",
+  "pais": "Colombia",
+  "socioPrincipal": {
+    "nombre": "Santiago Martinez Vasquez",
+    "cargo": "Socio principal y dueño"
+  },
+  "contacto": {
+    "whatsapp": "3182692794",
+    "whatsappIntl": "573182692794",
+    "email": "s62612007@gmail.com"
+  },
+  "puntoServicio": {
+    "nombre": "Honda Baterías - Cali",
+    "ciudad": "Cali",
+    "lat": 3.42412,
+    "lng": -76.54538
+  }
+}

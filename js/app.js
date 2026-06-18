@@ -1,11 +1,12 @@
 /**
- * Baterías Honda - Motor de búsqueda y cotización
- * Distribuidor Coéxito - Cali
+ * Honda Baterías - Motor de búsqueda y cotización
+ * Santiago Martinez Vasquez
  */
 
 const App = {
   precios: null,
   catalogo: null,
+  empresa: null,
   productosMap: {},
   marcasMap: {},
   cotizacion: [],
@@ -20,13 +21,15 @@ const App = {
 
   async init() {
     try {
-      const [preciosRes, catalogoRes] = await Promise.all([
+      const [preciosRes, catalogoRes, empresaRes] = await Promise.all([
         fetch('config/precios.json'),
-        fetch('data/catalogo.json')
+        fetch('data/catalogo.json'),
+        fetch('config/empresa.json')
       ]);
 
       this.precios = await preciosRes.json();
       this.catalogo = await catalogoRes.json();
+      this.empresa = await empresaRes.json();
       this.buildMaps();
       this.populateMarcas();
       this.setupEventListeners();
@@ -464,12 +467,14 @@ const App = {
 
     doc.setFontSize(18);
     doc.setTextColor(204, 0, 0);
-    doc.text('Baterías Honda', 105, 20, { align: 'center' });
+    doc.text(this.empresa?.nombre || 'Honda Baterías', 105, 20, { align: 'center' });
 
     doc.setFontSize(10);
     doc.setTextColor(100);
-    doc.text('Distribuidor Coéxito - Cali', 105, 28, { align: 'center' });
-    doc.text('Cotización de Baterías', 105, 34, { align: 'center' });
+    doc.text('Cotización de Baterías - Cali', 105, 28, { align: 'center' });
+    if (this.empresa?.contacto) {
+      doc.text(`WhatsApp: ${this.empresa.contacto.whatsapp}`, 105, 34, { align: 'center' });
+    }
 
     doc.setDrawColor(204, 0, 0);
     doc.line(20, 38, 190, 38);
@@ -553,9 +558,9 @@ const App = {
     doc.setTextColor(100);
     doc.text('Precios netos en COP. Sujetos a disponibilidad de inventario.', 20, y);
     doc.text('Garantía de 12 a 18 meses según marca.', 20, y + 5);
-    doc.text('Baterías Honda - Energía confiable para tu camino.', 105, y + 15, { align: 'center' });
+    doc.text(`${this.empresa?.nombre || 'Honda Baterías'} - ${this.empresa?.slogan || 'Energía confiable para tu camino.'}`, 105, y + 15, { align: 'center' });
 
-    doc.save(`cotizacion-baterias-honda-${Date.now()}.pdf`);
+    doc.save(`cotizacion-honda-baterias-${Date.now()}.pdf`);
   },
 
   limpiarBusqueda() {

@@ -1,15 +1,15 @@
 {
   "nombre": "PilaBot",
-  "version": "1.0",
+  "version": "1.1",
   "idioma": "es-CO",
+  "empresa": "Honda Baterías",
   "puntoInicio": {
-    "direccion": "Carrera 54A #7-05",
+    "nombre": "Honda Baterías - Cali",
     "ciudad": "Cali",
     "departamento": "Valle del Cauca",
     "pais": "Colombia",
     "lat": 3.42412,
-    "lng": -76.54538,
-    "googleMapsQuery": "Carrera+54A+7-05+Cali+Colombia"
+    "lng": -76.54538
   },
   "domicilio": {
     "formula": "haversine",
@@ -20,7 +20,7 @@
         "nombre": "Zona Cercana",
         "radioMaxKm": 1.5,
         "precio": 15000,
-        "descripcion": "Hasta 1.5 km a la redonda desde el punto de inicio"
+        "descripcion": "Hasta 1.5 km a la redonda desde nuestro punto de servicio"
       },
       {
         "id": "zona-amplia",
@@ -31,8 +31,14 @@
       }
     ],
     "fueraDeCobertura": {
-      "mensaje": "Uy parce, esa dirección queda por fuera de nuestro rango de 8 km. Llámenos al mostrador y miramos cómo lo organizamos, ¿listo?"
+      "mensaje": "Uy parce, esa ubicación queda por fuera de nuestro rango de 8 km en Cali. Escríbanos al WhatsApp {whatsapp} y miramos cómo lo organizamos, ¿listo?"
     }
+  },
+  "contacto": {
+    "socioPrincipal": "Santiago Martinez Vasquez",
+    "whatsapp": "3182692794",
+    "whatsappIntl": "573182692794",
+    "email": "s62612007@gmail.com"
   },
   "promociones": {
     "bateriaUsada": {
@@ -62,20 +68,21 @@
     "/vecindad": { "accion": "mostrarVecindad", "texto": "Promoción Vecindad" },
     "/cotizar": { "accion": "mostrarCotizacion", "texto": "Ver cotización actual" },
     "/total": { "accion": "calcularTotal", "texto": "Total con descuentos" },
+    "/contacto": { "accion": "mostrarContacto", "texto": "Datos de contacto" },
     "/ayuda": { "accion": "mostrarAyuda", "texto": "Menú de ayuda" },
     "/hola": { "accion": "saludar", "texto": "Saludo" }
   },
   "saludos": [
-    "¡Hola, parce! Soy PilaBot de Baterías Honda 🛵⚡",
+    "¡Hola, parce! Soy PilaBot de Honda Baterías 🛵⚡",
     "¿En qué le colaboro hoy? Puedo calcularle el domicilio, los descuentos y acompañarlo en la cotización."
   ],
   "frases": {
-    "pidiendoDireccion": "Primero lo primero: ¿pa' dónde le mandamos la pila? Escriba su dirección, barrio o punto de referencia en Cali (ej: 'Calle 15 #32-10, San Fernando').",
+    "pidiendoDireccion": "Primero lo primero: ¿pa' dónde le mandamos la pila? Escriba su barrio o punto de referencia en Cali.",
     "calculando": "Un momentico, estoy ubicando su dirección en el mapa... 🗺️",
-    "errorGeocoding": "No pude ubicar esa dirección, vea. Intente con barrio + ciudad, o más detalle (carrera, calle, número).",
-    "resultadoDomicilio": "Desde Carrera 54A #7-05 hasta su ubicación hay aprox. {distancia} km. Le corresponde {zona} por {precio}.",
+    "errorGeocoding": "No pude ubicar esa dirección, vea. Intente con barrio + Cali, o más detalle.",
+    "resultadoDomicilio": "Desde nuestro punto de servicio Honda Baterías en Cali hasta su ubicación hay aprox. {distancia} km. Le corresponde {zona} por {precio}.",
     "preguntaUsada": "Segunda preguntita: ¿tiene batería usada pa' entregar? Si confirma que sí, le rebajamos $30.000 de la referencia que escoja.",
-    "despedida": "¡Quedó! Cualquier cosa me escribe. Energía confiable pa' su camino. 🔋"
+    "despedida": "¡Quedó! Cualquier cosa me escribe o al WhatsApp {whatsapp}. Energía confiable pa' su camino. 🔋"
   },
   "ecuacion": {
     "descripcion": "distancia = haversine(puntoInicio, ubicacionCliente); si distancia <= 1.5 → $15.000; si distancia <= 8 → $25.000; si distancia > 8 → fuera de cobertura",
@@ -83,7 +90,7 @@
   },
   "accesibilidad": {
     "rol": "dialog",
-    "ariaLabel": "Asistente virtual PilaBot de Baterías Honda",
+    "ariaLabel": "Asistente virtual PilaBot de Honda Baterías",
     "teclaCerrar": "Escape",
     "tamanoMinimoToque": "44px"
   }

@@ -1,12 +1,12 @@
 /**
- * Test funcional del sitio Baterías Honda
+ * Test funcional del sitio Honda Baterías
  * Ejecutar: node test-sitio.js
  */
 
 const fs = require('fs');
 const https = require('https');
 
-const LIVE = 'https://s62612007-code.github.io/BATERIAS-HONDA-PUBLIC';
+const LIVE = 'https://s62612007-code.github.io/Venta-de-Baterias-Inspirado/';
 const resultados = { ok: [], warn: [], fail: [] };
 
 function log(tipo, msg) {
@@ -17,7 +17,7 @@ function log(tipo, msg) {
 
 function fetchUrl(url) {
   return new Promise((resolve, reject) => {
-    https.get(url, { headers: { 'User-Agent': 'BateriasHonda-Test/1.0' } }, (res) => {
+    https.get(url, { headers: { 'User-Agent': 'HondaBaterias-Test/1.0' } }, (res) => {
       let data = '';
       res.on('data', c => data += c);
       res.on('end', () => resolve({ status: res.statusCode, data, headers: res.headers }));
@@ -36,7 +36,7 @@ async function testLiveAssets() {
   const assets = [
     '/', '/index.html', '/css/styles.css', '/css/bot.css',
     '/js/app.js', '/js/bot.js', '/config/precios.json',
-    '/config/bot-biblioteca.json', '/data/catalogo.json',
+    '/config/empresa.json', '/config/bot-biblioteca.json', '/data/catalogo.json',
     '/images/logos/honda.svg', '/images/baterias/bosch-s4-l2-60.svg'
   ];
 
@@ -161,7 +161,7 @@ async function testGeocoding() {
 
 async function main() {
   console.log('═══════════════════════════════════════');
-  console.log('  TEST SITIO WEB - BATERÍAS HONDA');
+  console.log('  TEST SITIO WEB - HONDA BATERÍAS');
   console.log('═══════════════════════════════════════\n');
 
   console.log('--- 1. Archivos locales ---');

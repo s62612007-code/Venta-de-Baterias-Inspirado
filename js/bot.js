@@ -1,9 +1,6 @@
 /**
  * PilaBot - Asistente virtual inclusivo
- * Baterías Honda · Distribuidor Coéxito Cali
- *
- * Biblioteca interna: config/bot-biblioteca.json
- * Ecuación domicilio: haversine(puntoInicio, cliente) → zona → precio
+ * Honda Baterías · Santiago Martinez Vasquez
  */
 
 const PilaBot = {
@@ -45,14 +42,27 @@ const PilaBot = {
 
   getBibliotecaFallback() {
     return {
-      puntoInicio: { direccion: 'Carrera 54A #7-05', ciudad: 'Cali', lat: 3.42412, lng: -76.54538 },
+      empresa: 'Honda Baterías',
+      puntoInicio: { nombre: 'Honda Baterías - Cali', ciudad: 'Cali', lat: 3.42412, lng: -76.54538 },
+      contacto: { whatsapp: '3182692794', email: 's62612007@gmail.com', socioPrincipal: 'Santiago Martinez Vasquez' },
       domicilio: { zonas: [{ radioMaxKm: 1.5, precio: 15000 }, { radioMaxKm: 8, precio: 25000 }] },
       promociones: {
         bateriaUsada: { descuento: 30000 },
         vecindad: { nombre: 'Promoción Vecindad', descuento: 35000 }
       },
-      frases: { pidiendoDireccion: '¿Pa\' dónde le mandamos la pila?' }
+      frases: { pidiendoDireccion: '¿Pa\' dónde le mandamos la pila en Cali?' }
     };
+  },
+
+  interpolar(texto) {
+    const c = this.biblioteca.contacto || {};
+    return texto
+      .replace(/\{whatsapp\}/g, c.whatsapp || '')
+      .replace(/\{email\}/g, c.email || '');
+  },
+
+  nombrePuntoServicio() {
+    return this.biblioteca.puntoInicio?.nombre || this.biblioteca.empresa || 'Honda Baterías';
   },
 
   crearInterfaz() {
@@ -70,7 +80,7 @@ const PilaBot = {
           <div class="pilabot-header__avatar" aria-hidden="true">🔋</div>
           <div class="pilabot-header__info">
             <h2>PilaBot</h2>
-            <p>Baterías Honda · Cali</p>
+            <p>${this.biblioteca.empresa || 'Honda Baterías'} · Cali</p>
           </div>
           <button class="pilabot-header__close" id="pilabotCerrar" aria-label="Cerrar chat">
             <i class="bi bi-x-lg" aria-hidden="true"></i>
@@ -290,10 +300,9 @@ const PilaBot = {
   },
 
   generarUrlGoogleMaps(direccionDestino) {
-    const origen = this.biblioteca.puntoInicio.googleMapsQuery ||
-      encodeURIComponent(`${this.biblioteca.puntoInicio.direccion} ${this.biblioteca.puntoInicio.ciudad}`);
-    const destino = encodeURIComponent(`${direccionDestino}, Cali, Colombia`);
-    return `https://www.google.com/maps/dir/${origen}/${destino}`;
+    const ciudad = this.biblioteca.puntoInicio?.ciudad || 'Cali';
+    const destino = encodeURIComponent(`${direccionDestino}, ${ciudad}, Colombia`);
+    return `https://www.google.com/maps/search/?api=1&query=${destino}`;
   },
 
   /* ── Descuentos y total ── */
@@ -423,6 +432,7 @@ const PilaBot = {
       },
       mostrarCotizacion: () => this.mostrarEstadoCotizacion(),
       calcularTotal: () => this.mostrarTotal(),
+      mostrarContacto: () => this.mostrarContacto(),
       mostrarAyuda: () => this.mostrarAyuda(),
       saludar: () => this.iniciarConversacion()
     };
@@ -451,8 +461,9 @@ const PilaBot = {
       this.estado.googleMapsUrl = ubicacion.googleMapsUrl;
 
       if (!domicilio.cubierto) {
+        const msgFuera = this.interpolar(domicilio.mensaje || this.biblioteca.domicilio.fueraDeCobertura?.mensaje || '');
         await this.responder(
-          `📍 Su dirección queda a <strong>${domicilio.distanciaKm} km</strong> de Carrera 54A #7-05.<br>${domicilio.mensaje}`
+          `📍 Su ubicación queda a <strong>${domicilio.distanciaKm} km</strong> de nuestro punto de servicio en Cali.<br>${msgFuera}`
         );
         this.estado.paso = 'libre';
         return;
@@ -464,10 +475,10 @@ const PilaBot = {
         style: 'currency', currency: 'COP', minimumFractionDigits: 0
       }).format(n);
 
-      const msg = this.biblioteca.frases.resultadoDomicilio
+      const msg = this.interpolar(this.biblioteca.frases.resultadoDomicilio
         .replace('{distancia}', domicilio.distanciaKm)
         .replace('{zona}', domicilio.zona)
-        .replace('{precio}', fmt(domicilio.precio));
+        .replace('{precio}', fmt(domicilio.precio)));
 
       await this.responder(
         `📍 ${msg}<br><br>` +
@@ -561,8 +572,12 @@ const PilaBot = {
       return this.mostrarEstadoCotizacion();
     }
 
+    if (t.includes('contacto') || t.includes('whatsapp') || t.includes('correo') || t.includes('santiago')) {
+      return this.mostrarContacto();
+    }
+
     if (t.includes('gracias') || t.includes('chao') || t.includes('adios') || t.includes('adiós')) {
-      return this.responder(this.biblioteca.frases.despedida);
+      return this.responder(this.interpolar(this.biblioteca.frases.despedida));
     }
 
     if (t.includes('hola') || t.includes('buenas') || t.includes('qué hubo') || t.includes('que hubo')) {
@@ -590,7 +605,7 @@ const PilaBot = {
     msg += this.formatearResumenHTML(r);
 
     if (this.estado.domicilio) {
-      msg += `<br><small class="text-muted">Domicilio desde Carrera 54A #7-05 · ${this.estado.domicilio.zona}</small>`;
+      msg += `<br><small class="text-muted">Domicilio Honda Baterías · ${this.estado.domicilio.zona}</small>`;
     } else {
       msg += '<br><small>💡 Escriba <strong>/domicilio</strong> pa\' incluir el envío.</small>';
     }
@@ -621,6 +636,16 @@ const PilaBot = {
     await this.responder(msg);
   },
 
+  async mostrarContacto() {
+    const c = this.biblioteca.contacto || {};
+    await this.responder(
+      `📞 <strong>Contacto Honda Baterías</strong><br><br>` +
+      `👤 <strong>${c.socioPrincipal || 'Santiago Martinez Vasquez'}</strong> · Socio principal<br>` +
+      `📱 WhatsApp: <a href="https://wa.me/${c.whatsappIntl || '573182692794'}" target="_blank" rel="noopener">${c.whatsapp || '3182692794'}</a><br>` +
+      `✉️ Correo: <a href="mailto:${c.email || 's62612007@gmail.com'}">${c.email || 's62612007@gmail.com'}</a>`
+    );
+  },
+
   async mostrarAyuda() {
     const zonas = this.biblioteca.domicilio.zonas;
     const fmt = (n) => new Intl.NumberFormat('es-CO', {
@@ -628,13 +653,13 @@ const PilaBot = {
     }).format(n);
 
     let msg = '🇨🇴 <strong>PilaBot – Menú de ayuda</strong><br><br>';
-    msg += `<strong>📍 Domicilio</strong> (desde Carrera 54A #7-05):<br>`;
+    msg += `<strong>📍 Domicilio</strong> (Honda Baterías · Cali):<br>`;
     msg += `• Hasta ${zonas[0].radioMaxKm} km → ${fmt(zonas[0].precio)}<br>`;
     msg += `• Hasta ${zonas[1].radioMaxKm} km → ${fmt(zonas[1].precio)}<br><br>`;
     msg += `<strong>🔋 Descuentos:</strong><br>`;
     msg += `• Batería usada: -${fmt(this.biblioteca.promociones.bateriaUsada.descuento)}<br>`;
     msg += `• ${this.biblioteca.promociones.vecindad.nombre} (2ª pila): -${fmt(this.biblioteca.promociones.vecindad.descuento)}<br><br>`;
-    msg += '<strong>Atajos:</strong> /domicilio · /usada · /vecindad · /total · /cotizar';
+    msg += '<strong>Atajos:</strong> /domicilio · /usada · /vecindad · /total · /contacto · /cotizar';
 
     await this.responder(msg);
     this.mostrarQuick([
