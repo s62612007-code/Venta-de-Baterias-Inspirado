@@ -77,7 +77,13 @@ node test-sitio.js
 
 ## 🌐 Sitio en línea
 
-https://s62612007-code.github.io/Venta-de-Baterias-Inspirado/
+| URL | Uso |
+|-----|-----|
+| https://hondabaterias.com | Dominio principal (A) |
+| https://hondabateriascali.com | Dominio alterno (B) → redirige al A |
+| https://s62612007-code.github.io/Venta-de-Baterias-Inspirado/ | GitHub Pages |
+
+Configuración DNS detallada en [DOMINIO.md](DOMINIO.md).
 
 ---
 
