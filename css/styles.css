@@ -1,0 +1,478 @@
+/* Baterías Honda - Estilos del cotizador */
+
+:root {
+  --honda-red: #cc0000;
+  --honda-dark: #1a1a1a;
+  --honda-gray: #f4f4f4;
+  --coexito-blue: #003366;
+  --accent-gold: #c9a227;
+  --marca-section-gap: 2.5rem;
+  --logo-height: 48px;
+  --logo-height-sm: 36px;
+  --battery-img-height: 140px;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: var(--honda-gray);
+  color: var(--honda-dark);
+}
+
+/* ── Navbar & logos globales ── */
+
+.navbar-logo {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+}
+
+.footer-logo {
+  height: 32px;
+  width: auto;
+  opacity: 0.85;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.navbar-honda {
+  background: linear-gradient(135deg, var(--honda-red) 0%, #990000 100%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ── Hero ── */
+
+.hero-section {
+  background: linear-gradient(135deg, var(--coexito-blue) 0%, #004d99 100%);
+  color: white;
+  padding: 2.5rem 0;
+  margin-bottom: 2rem;
+}
+
+.hero-section h1 {
+  font-weight: 700;
+  font-size: 1.75rem;
+}
+
+.section-title {
+  font-weight: 700;
+  color: var(--honda-dark);
+  border-left: 4px solid var(--honda-red);
+  padding-left: 0.75rem;
+}
+
+/* ── Buscador ── */
+
+.search-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-top: -3rem;
+  position: relative;
+  z-index: 10;
+}
+
+.search-card .card-header {
+  background: white;
+  border-bottom: 2px solid var(--honda-red);
+  font-weight: 600;
+  border-radius: 12px 12px 0 0 !important;
+}
+
+/* ── Cabecera de marca (logo + título) ── */
+
+.marca-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  border-left: 5px solid var(--marca-color, var(--coexito-blue));
+}
+
+.marca-header__logo {
+  flex-shrink: 0;
+  height: var(--logo-height);
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+  padding: 0.25rem 0.5rem;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.marca-header__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.marca-header__titulo {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+  color: var(--marca-color, var(--honda-dark));
+}
+
+.marca-header__desc {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #6c757d;
+  line-height: 1.4;
+}
+
+.marca-header__count {
+  flex-shrink: 0;
+  font-size: 0.8rem;
+  color: #adb5bd;
+  text-align: right;
+}
+
+/* ── Tabs con logo mini ── */
+
+.tab-marca .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--honda-dark);
+  font-weight: 500;
+  border-radius: 8px 8px 0 0;
+  padding: 0.6rem 1rem;
+  white-space: nowrap;
+}
+
+.tab-marca .nav-link img {
+  height: 22px;
+  width: auto;
+  object-fit: contain;
+}
+
+.tab-marca .nav-link.active {
+  background-color: var(--honda-red);
+  color: white;
+  border-color: var(--honda-red);
+}
+
+.tab-marca .nav-link.active img {
+  filter: brightness(0) invert(1);
+}
+
+.catalogo-tab-content {
+  background: white;
+  border: 1px solid #dee2e6;
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  padding: 1.5rem;
+}
+
+/* ── Tarjeta de batería con imagen ── */
+
+.battery-card {
+  border: none;
+  border-radius: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  height: 100%;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.battery-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.battery-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 0.85rem;
+  background: var(--marca-color, #333);
+  color: white;
+}
+
+.battery-card__brand-logo {
+  height: var(--logo-height-sm);
+  width: auto;
+  max-width: 100px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.battery-card__gama {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+}
+
+.battery-card__image-wrap {
+  background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 0.75rem;
+  text-align: center;
+  min-height: calc(var(--battery-img-height) + 1.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.battery-card__image {
+  height: var(--battery-img-height);
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform 0.2s;
+}
+
+.battery-card:hover .battery-card__image {
+  transform: scale(1.03);
+}
+
+.battery-card__body {
+  padding: 1rem;
+}
+
+.battery-card__referencia {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+  color: var(--honda-dark);
+  line-height: 1.3;
+}
+
+.battery-card__uso {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+/* Colores por marca */
+.brand-bosch    { --marca-color: #003399; }
+.brand-mac      { --marca-color: #e63900; }
+.brand-varta    { --marca-color: #0066cc; }
+.brand-coexito  { --marca-color: #003366; }
+.brand-duncan   { --marca-color: #2d6a4f; }
+.brand-willard  { --marca-color: #d4a017; }
+
+.price-tag {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--honda-red);
+}
+
+.spec-badge {
+  font-size: 0.8rem;
+  margin-right: 0.25rem;
+}
+
+.gama-badge {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ── Tabla comparativa con mini logo ── */
+
+.comparison-table .marca-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.comparison-table .marca-cell img {
+  height: 24px;
+  width: auto;
+  object-fit: contain;
+}
+
+.comparison-table .ref-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.comparison-table .ref-thumb {
+  height: 48px;
+  width: 72px;
+  object-fit: contain;
+  background: #f8f9fa;
+  border-radius: 6px;
+  padding: 2px;
+}
+
+/* ── Búsqueda rápida con imagen ── */
+
+.busqueda-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.busqueda-item__img {
+  height: 40px;
+  width: 60px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.busqueda-item__logo {
+  height: 18px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ── Botones ── */
+
+.btn-honda {
+  background-color: var(--honda-red);
+  border-color: var(--honda-red);
+  color: white;
+  font-weight: 600;
+}
+
+.btn-honda:hover {
+  background-color: #990000;
+  border-color: #990000;
+  color: white;
+}
+
+.btn-outline-honda {
+  border-color: var(--honda-red);
+  color: var(--honda-red);
+  font-weight: 600;
+}
+
+.btn-outline-honda:hover {
+  background-color: var(--honda-red);
+  color: white;
+}
+
+/* ── Cotización ── */
+
+.cotizacion-panel {
+  position: sticky;
+  top: 1rem;
+}
+
+.cotizacion-item {
+  background: white;
+  border-radius: 8px;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border-left: 4px solid var(--honda-red);
+}
+
+.cotizacion-item__row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.cotizacion-item__thumb {
+  height: 36px;
+  width: 52px;
+  object-fit: contain;
+  flex-shrink: 0;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.cotizacion-total {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--honda-red);
+}
+
+.cotizacion-descuentos {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: #f8f9fa;
+  border-radius: 6px;
+}
+
+.vehicle-info {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 8px;
+  padding: 1rem;
+  border-left: 4px solid var(--coexito-blue);
+}
+
+.no-results {
+  text-align: center;
+  padding: 3rem;
+  color: #6c757d;
+}
+
+.footer-honda {
+  background: var(--honda-dark);
+  color: #adb5bd;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+}
+
+.comparison-table th {
+  background-color: var(--coexito-blue);
+  color: white;
+  font-weight: 600;
+}
+
+.comparison-table .best-price {
+  background-color: #d4edda;
+  font-weight: 700;
+}
+
+.loading-spinner {
+  display: none;
+  text-align: center;
+  padding: 2rem;
+}
+
+.badge-mejor-precio {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 2;
+}
+
+.battery-card--destacada {
+  border: 2px solid #28a745;
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 768px) {
+  :root {
+    --logo-height: 40px;
+    --battery-img-height: 110px;
+  }
+
+  .hero-section h1 {
+    font-size: 1.4rem;
+  }
+
+  .search-card {
+    margin-top: -2rem;
+  }
+
+  .price-tag {
+    font-size: 1.2rem;
+  }
+
+  .marca-header {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .marca-header__count {
+    width: 100%;
+    text-align: left;
+  }
+}

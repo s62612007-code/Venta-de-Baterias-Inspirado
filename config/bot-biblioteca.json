@@ -1,0 +1,90 @@
+{
+  "nombre": "PilaBot",
+  "version": "1.0",
+  "idioma": "es-CO",
+  "puntoInicio": {
+    "direccion": "Carrera 54A #7-05",
+    "ciudad": "Cali",
+    "departamento": "Valle del Cauca",
+    "pais": "Colombia",
+    "lat": 3.42412,
+    "lng": -76.54538,
+    "googleMapsQuery": "Carrera+54A+7-05+Cali+Colombia"
+  },
+  "domicilio": {
+    "formula": "haversine",
+    "unidad": "km",
+    "zonas": [
+      {
+        "id": "zona-cercana",
+        "nombre": "Zona Cercana",
+        "radioMaxKm": 1.5,
+        "precio": 15000,
+        "descripcion": "Hasta 1.5 km a la redonda desde el punto de inicio"
+      },
+      {
+        "id": "zona-amplia",
+        "nombre": "Zona Amplia",
+        "radioMaxKm": 8,
+        "precio": 25000,
+        "descripcion": "De 1.5 km hasta 8 km a la redonda"
+      }
+    ],
+    "fueraDeCobertura": {
+      "mensaje": "Uy parce, esa dirección queda por fuera de nuestro rango de 8 km. Llámenos al mostrador y miramos cómo lo organizamos, ¿listo?"
+    }
+  },
+  "promociones": {
+    "bateriaUsada": {
+      "id": "descuento-usada",
+      "activa": true,
+      "descuento": 30000,
+      "aplicaA": "referencia_escogida",
+      "pregunta": "¿Tiene batería usada pa' entregar al momento de la instalación?",
+      "confirmacionSi": "¡Bacano! Le rebajamos $30.000 a la referencia que elija. Traiga la pila usada sin pena.",
+      "confirmacionNo": "Listo, sin problema. Si después la consigue, nos avisa y miramos.",
+      "propiedad": "rebajaBateriaUsada"
+    },
+    "vecindad": {
+      "id": "promocion-vecindad",
+      "nombre": "Promoción Vecindad",
+      "activa": true,
+      "descuento": 35000,
+      "aplicaA": "segunda_bateria",
+      "condicion": "Al comprar dos o más baterías, la segunda en adelante tiene $35.000 de descuento por vecindad.",
+      "mensaje": "¡Ojo pues! Con la Promoción Vecindad, la segunda pila que lleve le quita $35.000. Pa' el vecino, pa' la finca o pa' otro carro, ¡aproveche!",
+      "propiedad": "descuentoVecindad"
+    }
+  },
+  "atajos": {
+    "/domicilio": { "accion": "preguntarDistancia", "texto": "Calcular domicilio" },
+    "/usada": { "accion": "preguntarBateriaUsada", "texto": "Descuento batería usada" },
+    "/vecindad": { "accion": "mostrarVecindad", "texto": "Promoción Vecindad" },
+    "/cotizar": { "accion": "mostrarCotizacion", "texto": "Ver cotización actual" },
+    "/total": { "accion": "calcularTotal", "texto": "Total con descuentos" },
+    "/ayuda": { "accion": "mostrarAyuda", "texto": "Menú de ayuda" },
+    "/hola": { "accion": "saludar", "texto": "Saludo" }
+  },
+  "saludos": [
+    "¡Hola, parce! Soy PilaBot de Baterías Honda 🛵⚡",
+    "¿En qué le colaboro hoy? Puedo calcularle el domicilio, los descuentos y acompañarlo en la cotización."
+  ],
+  "frases": {
+    "pidiendoDireccion": "Primero lo primero: ¿pa' dónde le mandamos la pila? Escriba su dirección, barrio o punto de referencia en Cali (ej: 'Calle 15 #32-10, San Fernando').",
+    "calculando": "Un momentico, estoy ubicando su dirección en el mapa... 🗺️",
+    "errorGeocoding": "No pude ubicar esa dirección, vea. Intente con barrio + ciudad, o más detalle (carrera, calle, número).",
+    "resultadoDomicilio": "Desde Carrera 54A #7-05 hasta su ubicación hay aprox. {distancia} km. Le corresponde {zona} por {precio}.",
+    "preguntaUsada": "Segunda preguntita: ¿tiene batería usada pa' entregar? Si confirma que sí, le rebajamos $30.000 de la referencia que escoja.",
+    "despedida": "¡Quedó! Cualquier cosa me escribe. Energía confiable pa' su camino. 🔋"
+  },
+  "ecuacion": {
+    "descripcion": "distancia = haversine(puntoInicio, ubicacionCliente); si distancia <= 1.5 → $15.000; si distancia <= 8 → $25.000; si distancia > 8 → fuera de cobertura",
+    "radioTierraKm": 6371
+  },
+  "accesibilidad": {
+    "rol": "dialog",
+    "ariaLabel": "Asistente virtual PilaBot de Baterías Honda",
+    "teclaCerrar": "Escape",
+    "tamanoMinimoToque": "44px"
+  }
+}

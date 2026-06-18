@@ -1,0 +1,245 @@
+{
+  "actualizado": "2025-06-01",
+  "vehiculos": [
+    {
+      "id": "chevrolet-spark-gt",
+      "marca": "Chevrolet",
+      "modelo": "Spark GT",
+      "cilindraje": "1.2L",
+      "anioDesde": 2010,
+      "anioHasta": 2025,
+      "tipo": "Hatchback",
+      "baterias": ["willard-extrema-ns40i", "varta-blue-42-620", "mac-silver-36-750", "coexito-evolution-42-650", "duncan-liberty-plus-12"]
+    },
+    {
+      "id": "kia-picanto",
+      "marca": "Kia",
+      "modelo": "Picanto",
+      "cilindraje": "1.0L - 1.2L",
+      "anioDesde": 2011,
+      "anioHasta": 2025,
+      "tipo": "Hatchback",
+      "baterias": ["varta-blue-42-620", "mac-silver-36-750", "coexito-evolution-42-650", "willard-extrema-ns40i"]
+    },
+    {
+      "id": "renault-kwid",
+      "marca": "Renault",
+      "modelo": "Kwid",
+      "cilindraje": "1.0L",
+      "anioDesde": 2017,
+      "anioHasta": 2025,
+      "tipo": "Hatchback",
+      "baterias": ["mac-silver-36-750", "coexito-evolution-42-650", "willard-extrema-ns40i", "varta-blue-42-620"]
+    },
+    {
+      "id": "renault-twingo",
+      "marca": "Renault",
+      "modelo": "Twingo",
+      "cilindraje": "1.0L",
+      "anioDesde": 2015,
+      "anioHasta": 2022,
+      "tipo": "Hatchback",
+      "baterias": ["mac-silver-36-750", "coexito-evolution-42-650", "willard-extrema-ns40i"]
+    },
+    {
+      "id": "kia-rio",
+      "marca": "Kia",
+      "modelo": "Rio",
+      "cilindraje": "1.4L - 1.6L",
+      "anioDesde": 2012,
+      "anioHasta": 2025,
+      "tipo": "Sedán",
+      "baterias": ["coexito-evolution-42-730", "bosch-s3-42-650", "mac-silver-42-750", "willard-extrema-42-670k"]
+    },
+    {
+      "id": "ford-fiesta",
+      "marca": "Ford",
+      "modelo": "Fiesta",
+      "cilindraje": "1.4L - 1.6L",
+      "anioDesde": 2010,
+      "anioHasta": 2020,
+      "tipo": "Hatchback",
+      "baterias": ["coexito-evolution-42-730", "bosch-s3-42-650", "mac-silver-42-750", "duncan-liberty-plus-12"]
+    },
+    {
+      "id": "chevrolet-aveo",
+      "marca": "Chevrolet",
+      "modelo": "Aveo",
+      "cilindraje": "1.4L - 1.6L",
+      "anioDesde": 2008,
+      "anioHasta": 2025,
+      "tipo": "Sedán",
+      "baterias": ["mac-silver-42-750", "willard-extrema-42-670k", "bosch-s3-42-650", "coexito-total-42-700", "duncan-liberty-plus-15"]
+    },
+    {
+      "id": "renault-logan",
+      "marca": "Renault",
+      "modelo": "Logan",
+      "cilindraje": "1.4L - 1.6L",
+      "anioDesde": 2010,
+      "anioHasta": 2025,
+      "tipo": "Sedán",
+      "baterias": ["mac-silver-42-750", "willard-extrema-42-670k", "bosch-s3-42-650", "coexito-total-42-700"]
+    },
+    {
+      "id": "renault-sandero",
+      "marca": "Renault",
+      "modelo": "Sandero",
+      "cilindraje": "1.4L - 1.6L",
+      "anioDesde": 2010,
+      "anioHasta": 2025,
+      "tipo": "Hatchback",
+      "baterias": ["willard-extrema-42-670k", "mac-silver-42-750", "bosch-s3-42-650", "coexito-total-42-700"]
+    },
+    {
+      "id": "chevrolet-optra",
+      "marca": "Chevrolet",
+      "modelo": "Optra",
+      "cilindraje": "1.8L",
+      "anioDesde": 2008,
+      "anioHasta": 2015,
+      "tipo": "Sedán",
+      "baterias": ["mac-silver-42-750", "bosch-s4-l2-60", "coexito-total-42-700", "duncan-liberty-plus-15"]
+    },
+    {
+      "id": "hyundai-tucson",
+      "marca": "Hyundai",
+      "modelo": "Tucson",
+      "cilindraje": "2.0L",
+      "anioDesde": 2015,
+      "anioHasta": 2025,
+      "tipo": "SUV",
+      "baterias": ["mac-gold-34-925", "bosch-s4-34-900", "willard-increible-34-800", "coexito-total-34-900"]
+    },
+    {
+      "id": "kia-sportage",
+      "marca": "Kia",
+      "modelo": "Sportage",
+      "cilindraje": "2.0L",
+      "anioDesde": 2016,
+      "anioHasta": 2025,
+      "tipo": "SUV",
+      "baterias": ["mac-gold-34-925", "bosch-s4-34-900", "willard-increible-34-800", "coexito-total-34-900"]
+    },
+    {
+      "id": "renault-duster",
+      "marca": "Renault",
+      "modelo": "Duster",
+      "cilindraje": "1.6L - 2.0L",
+      "anioDesde": 2012,
+      "anioHasta": 2025,
+      "tipo": "SUV",
+      "baterias": ["mac-gold-34-925", "bosch-s4-34-900", "willard-increible-34-800", "duncan-inyeccion-34"]
+    },
+    {
+      "id": "suzuki-jimny",
+      "marca": "Suzuki",
+      "modelo": "Jimny",
+      "cilindraje": "1.3L",
+      "anioDesde": 2010,
+      "anioHasta": 2025,
+      "tipo": "Campero",
+      "baterias": ["willard-extrema-ns40i", "mac-silver-36-750", "coexito-evolution-42-650"]
+    },
+    {
+      "id": "suzuki-vitara",
+      "marca": "Suzuki",
+      "modelo": "Vitara",
+      "cilindraje": "1.6L",
+      "anioDesde": 2015,
+      "anioHasta": 2025,
+      "tipo": "SUV",
+      "baterias": ["willard-extrema-ns40i", "mac-silver-42-750", "bosch-s3-42-650", "coexito-total-42-700"]
+    },
+    {
+      "id": "toyota-hilux",
+      "marca": "Toyota",
+      "modelo": "Hilux",
+      "cilindraje": "2.4L - 2.8L Diésel",
+      "anioDesde": 2016,
+      "anioHasta": 2025,
+      "tipo": "Camioneta",
+      "baterias": ["willard-titanio-27-1000", "bosch-s5-27-1000", "bosch-s4-34-900", "coexito-total-34-900"]
+    },
+    {
+      "id": "chevrolet-dmax",
+      "marca": "Chevrolet",
+      "modelo": "D-Max",
+      "cilindraje": "2.5L - 3.0L Diésel",
+      "anioDesde": 2013,
+      "anioHasta": 2025,
+      "tipo": "Camioneta",
+      "baterias": ["willard-titanio-27-1000", "bosch-s5-27-1000", "bosch-s4-34-900"]
+    },
+    {
+      "id": "mazda-3",
+      "marca": "Mazda",
+      "modelo": "Mazda 3",
+      "cilindraje": "2.0L",
+      "anioDesde": 2014,
+      "anioHasta": 2025,
+      "tipo": "Sedán",
+      "baterias": ["bosch-s4-l2-60", "varta-blue-ln2-v4870", "mac-silver-42-750", "coexito-total-42-700"]
+    },
+    {
+      "id": "volkswagen-jetta",
+      "marca": "Volkswagen",
+      "modelo": "Jetta",
+      "cilindraje": "1.4T - 2.0L",
+      "anioDesde": 2015,
+      "anioHasta": 2025,
+      "tipo": "Sedán",
+      "baterias": ["varta-blue-ln2-v4870", "bosch-s4-l2-60", "varta-silver-efb-n60", "bosch-efb-l3"]
+    },
+    {
+      "id": "bmw-x3",
+      "marca": "BMW",
+      "modelo": "X3",
+      "cilindraje": "2.0L",
+      "anioDesde": 2018,
+      "anioHasta": 2025,
+      "tipo": "SUV Premium",
+      "baterias": ["varta-agm-ln5", "bosch-agm-ln4", "mac-agm-ln4", "willard-agm-48d"]
+    },
+    {
+      "id": "mercedes-c-class",
+      "marca": "Mercedes-Benz",
+      "modelo": "Clase C",
+      "cilindraje": "1.6T - 2.0L",
+      "anioDesde": 2015,
+      "anioHasta": 2025,
+      "tipo": "Sedán Premium",
+      "baterias": ["bosch-agm-ln4", "varta-silver-efb-n60", "willard-agm-48d", "mac-agm-ln4"]
+    },
+    {
+      "id": "nissan-sentra",
+      "marca": "Nissan",
+      "modelo": "Sentra",
+      "cilindraje": "1.6L - 1.8L",
+      "anioDesde": 2013,
+      "anioHasta": 2025,
+      "tipo": "Sedán",
+      "baterias": ["bosch-s4-l2-60", "mac-silver-42-750", "coexito-total-42-700", "duncan-liberty-plus-15"]
+    },
+    {
+      "id": "toyota-corolla",
+      "marca": "Toyota",
+      "modelo": "Corolla",
+      "cilindraje": "1.6L - 1.8L",
+      "anioDesde": 2014,
+      "anioHasta": 2025,
+      "tipo": "Sedán",
+      "baterias": ["bosch-s4-l2-60", "mac-silver-42-750", "willard-extrema-42-670k", "coexito-total-42-700"]
+    },
+    {
+      "id": "mazda-cx5",
+      "marca": "Mazda",
+      "modelo": "CX-5",
+      "cilindraje": "2.0L - 2.5L",
+      "anioDesde": 2017,
+      "anioHasta": 2025,
+      "tipo": "SUV",
+      "baterias": ["bosch-s4-34-900", "mac-gold-34-925", "varta-blue-ln2-v4870", "willard-increible-34-800"]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 180" role="img" aria-label="Willard Extrema 42-670K">
+  <rect x="20" y="30" width="240" height="120" rx="12" fill="#2a2a2a" stroke="#555" stroke-width="2"/>
+  <rect x="8" y="70" width="14" height="40" rx="3" fill="#888"/>
+  <rect x="30" y="45" width="200" height="90" rx="8" fill="#d4a017" opacity="0.85"/>
+  <rect x="40" y="55" width="80" height="12" rx="2" fill="#fff" opacity="0.3"/>
+  <rect x="40" y="75" width="120" height="8" rx="2" fill="#fff" opacity="0.2"/>
+  <text x="140" y="105" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="13" fill="#fff">Extrema 42-670K</text>
+  <text x="140" y="125" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#ccc">willard-extrema-42-670k</text>
+  <circle cx="230" cy="50" r="8" fill="#4caf50"/>
+  <text x="230" y="54" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#fff">+</text>
+</svg>

@@ -1,0 +1,321 @@
+{
+  "actualizado": "2025-06-01",
+  "moneda": "COP",
+  "marcas": {
+    "bosch": {
+      "nombre": "Bosch",
+      "descripcion": "Tecnología alemana de alta duración y rendimiento superior.",
+      "productos": [
+        {
+          "id": "bosch-s3-42-550",
+          "nombre": "Bosch S3 42-550",
+          "gama": "Entrada",
+          "ah": 50,
+          "cca": 550,
+          "precio": 380000,
+          "uso": "Autos compactos de uso urbano",
+          "imagen": "images/baterias/bosch-s3-42-550.svg"
+        },
+        {
+          "id": "bosch-s3-42-650",
+          "nombre": "Bosch S3 42-650",
+          "gama": "Entrada Superior",
+          "ah": 55,
+          "cca": 650,
+          "precio": 410000,
+          "uso": "Sedanes compactos y hatchbacks",
+          "imagen": "images/baterias/bosch-s3-42-650.svg"
+        },
+        {
+          "id": "bosch-s4-l2-60",
+          "nombre": "Bosch S4 L2-60",
+          "gama": "Alta Gama",
+          "ah": 60,
+          "cca": 680,
+          "precio": 495000,
+          "uso": "Autos modernos de gama media-alta",
+          "imagen": "images/baterias/bosch-s4-l2-60.svg"
+        },
+        {
+          "id": "bosch-s4-34-900",
+          "nombre": "Bosch S4 34-900",
+          "gama": "Alta Gama",
+          "ah": 70,
+          "cca": 900,
+          "precio": 570000,
+          "uso": "Camionetas y SUV familiares",
+          "imagen": "images/baterias/bosch-s4-34-900.svg"
+        },
+        {
+          "id": "bosch-efb-l3",
+          "nombre": "Bosch EFB L3",
+          "gama": "Start-Stop",
+          "ah": 70,
+          "cca": 750,
+          "precio": 890000,
+          "uso": "Vehículos con tecnología Start-Stop convencional",
+          "imagen": "images/baterias/bosch-efb-l3.svg"
+        },
+        {
+          "id": "bosch-s5-27-1000",
+          "nombre": "Bosch S5 27-1000",
+          "gama": "Premium",
+          "ah": 90,
+          "cca": 1000,
+          "precio": 910000,
+          "uso": "Motores diésel y camionetas pesadas",
+          "imagen": "images/baterias/bosch-s5-27-1000.svg"
+        },
+        {
+          "id": "bosch-agm-ln4",
+          "nombre": "Bosch AGM LN4",
+          "gama": "Start-Stop Premium",
+          "ah": 80,
+          "cca": 800,
+          "precio": 1250000,
+          "uso": "Vehículos Start-Stop de alta gama",
+          "imagen": "images/baterias/bosch-agm-ln4.svg"
+        }
+      ],
+      "logo": "images/logos/bosch.svg"
+    },
+    "mac": {
+      "nombre": "MAC",
+      "descripcion": "La batería de confianza con tecnología CycleMax, líder en el mercado.",
+      "productos": [
+        {
+          "id": "mac-silver-36-750",
+          "nombre": "MAC Silver 36-750",
+          "gama": "Silver",
+          "ah": 42,
+          "cca": 750,
+          "precio": 337250,
+          "uso": "Autos urbanos compactos (Spark GT, Twingo, Kwid)",
+          "imagen": "images/baterias/mac-silver-36-750.svg"
+        },
+        {
+          "id": "mac-silver-42-750",
+          "nombre": "MAC Silver 42-750",
+          "gama": "Silver",
+          "ah": 55,
+          "cca": 750,
+          "precio": 427900,
+          "uso": "Sedanes medianos estándar (Aveo, Logan, Optra)",
+          "imagen": "images/baterias/mac-silver-42-750.svg"
+        },
+        {
+          "id": "mac-gold-34-925",
+          "nombre": "MAC Gold 34-925",
+          "gama": "Gold",
+          "ah": 70,
+          "cca": 925,
+          "precio": 510000,
+          "uso": "Camionetas SUV familiares (Tucson, Sportage, Duster)",
+          "imagen": "images/baterias/mac-gold-34-925.svg"
+        },
+        {
+          "id": "mac-agm-ln4",
+          "nombre": "MAC AGM LN4",
+          "gama": "AGM",
+          "ah": 80,
+          "cca": 800,
+          "precio": 1220000,
+          "uso": "Vehículos de alta gama con tecnología Start-Stop",
+          "imagen": "images/baterias/mac-agm-ln4.svg"
+        }
+      ],
+      "logo": "images/logos/mac.svg"
+    },
+    "varta": {
+      "nombre": "Varta",
+      "descripcion": "Energía avanzada para vehículos modernos y sistemas Start-Stop.",
+      "productos": [
+        {
+          "id": "varta-blue-42-620",
+          "nombre": "Varta Blue 42-620",
+          "gama": "Blue",
+          "ah": 50,
+          "cca": 620,
+          "precio": 310000,
+          "uso": "Autos de equipamiento básico y taxis (Picanto, Spark)",
+          "imagen": "images/baterias/varta-blue-42-620.svg"
+        },
+        {
+          "id": "varta-blue-ln2-v4870",
+          "nombre": "Varta Blue LN2 V4870",
+          "gama": "Blue",
+          "ah": 70,
+          "cca": 870,
+          "precio": 652990,
+          "uso": "Sedanes modernos y vehículos europeos estándar",
+          "imagen": "images/baterias/varta-blue-ln2-v4870.svg"
+        },
+        {
+          "id": "varta-silver-efb-n60",
+          "nombre": "Varta Silver EFB N60",
+          "gama": "Silver EFB",
+          "ah": 60,
+          "cca": 600,
+          "precio": 910000,
+          "uso": "Sistemas Start-Stop de gama media y motores turbo",
+          "imagen": "images/baterias/varta-silver-efb-n60.svg"
+        },
+        {
+          "id": "varta-agm-ln5",
+          "nombre": "Varta AGM LN5",
+          "gama": "AGM",
+          "ah": 95,
+          "cca": 850,
+          "precio": 1380000,
+          "uso": "Camionetas premium alemanas y alta demanda eléctrica",
+          "imagen": "images/baterias/varta-agm-ln5.svg"
+        }
+      ],
+      "logo": "images/logos/varta.svg"
+    },
+    "coexito": {
+      "nombre": "Coéxito",
+      "descripcion": "Marca propia Coéxito con excelente relación calidad-precio.",
+      "productos": [
+        {
+          "id": "coexito-evolution-42-650",
+          "nombre": "Coéxito Evolution 42-650",
+          "gama": "Evolution",
+          "ah": 55,
+          "cca": 650,
+          "precio": 260000,
+          "uso": "Vehículos particulares pequeños o transporte público",
+          "imagen": "images/baterias/coexito-evolution-42-650.svg"
+        },
+        {
+          "id": "coexito-evolution-42-730",
+          "nombre": "Coéxito Evolution 42-730",
+          "gama": "Evolution",
+          "ah": 55,
+          "cca": 730,
+          "precio": 275000,
+          "uso": "Autos compactos convencionales (Kia Rio, Ford Fiesta)",
+          "imagen": "images/baterias/coexito-evolution-42-730.svg"
+        },
+        {
+          "id": "coexito-total-42-700",
+          "nombre": "Coéxito Total 42-700",
+          "gama": "Total",
+          "ah": 60,
+          "cca": 700,
+          "precio": 360000,
+          "uso": "Sedanes familiares medianos y utilitarios",
+          "imagen": "images/baterias/coexito-total-42-700.svg"
+        },
+        {
+          "id": "coexito-total-34-900",
+          "nombre": "Coéxito Total 34-900",
+          "gama": "Total",
+          "ah": 75,
+          "cca": 900,
+          "precio": 490000,
+          "uso": "Camperos, camionetas 4x4 y plantas eléctricas pequeñas",
+          "imagen": "images/baterias/coexito-total-34-900.svg"
+        }
+      ],
+      "logo": "images/logos/coexito.svg"
+    },
+    "duncan": {
+      "nombre": "Duncan",
+      "descripcion": "Excelente relación calidad-precio y alta resistencia térmica.",
+      "productos": [
+        {
+          "id": "duncan-liberty-plus-12",
+          "nombre": "Duncan Liberty Plus 12 Meses",
+          "gama": "Liberty Plus",
+          "ah": 42,
+          "cca": 550,
+          "caja": "42",
+          "precio": 295000,
+          "uso": "Carros económicos de uso principalmente urbano",
+          "imagen": "images/baterias/duncan-liberty-plus-12.svg"
+        },
+        {
+          "id": "duncan-liberty-plus-15",
+          "nombre": "Duncan Liberty Plus 15 Meses",
+          "gama": "Liberty Plus",
+          "ah": 60,
+          "cca": 650,
+          "caja": "24",
+          "precio": 380000,
+          "uso": "Sedanes asiáticos y americanos de gama media",
+          "imagen": "images/baterias/duncan-liberty-plus-15.svg"
+        },
+        {
+          "id": "duncan-inyeccion-34",
+          "nombre": "Duncan Inyección",
+          "gama": "Inyección",
+          "ah": 70,
+          "cca": 800,
+          "caja": "34",
+          "precio": 440000,
+          "uso": "Vehículos comerciales y camionetas medianas",
+          "imagen": "images/baterias/duncan-inyeccion-34.svg"
+        }
+      ],
+      "logo": "images/logos/duncan.svg"
+    },
+    "willard": {
+      "nombre": "Willard",
+      "descripcion": "Tradición y potencia garantizada para todo tipo de terrenos.",
+      "productos": [
+        {
+          "id": "willard-extrema-ns40i",
+          "nombre": "Willard Extrema NS40I-560PD",
+          "gama": "Extrema",
+          "ah": 40,
+          "cca": 440,
+          "precio": 236900,
+          "uso": "Camperos compactos y autos pequeños (Suzuki Jimny, Vitara)",
+          "imagen": "images/baterias/willard-extrema-ns40i.svg"
+        },
+        {
+          "id": "willard-extrema-42-670k",
+          "nombre": "Willard Extrema 42-670K",
+          "gama": "Extrema",
+          "ah": 55,
+          "cca": 550,
+          "precio": 345900,
+          "uso": "Sedanes de gran volumen (Renault Logan, Sandero, Aveo)",
+          "imagen": "images/baterias/willard-extrema-42-670k.svg"
+        },
+        {
+          "id": "willard-increible-34-800",
+          "nombre": "Willard Increíble 34-800",
+          "gama": "Increíble",
+          "ah": 70,
+          "cca": 800,
+          "precio": 460000,
+          "uso": "Camionetas a gasolina convencionales",
+          "imagen": "images/baterias/willard-increible-34-800.svg"
+        },
+        {
+          "id": "willard-titanio-27-1000",
+          "nombre": "Willard Titanio 27-1000",
+          "gama": "Titanio",
+          "ah": 90,
+          "cca": 1000,
+          "precio": 820000,
+          "uso": "Camionetas pesadas turbo diésel (Hilux, D-Max)",
+          "imagen": "images/baterias/willard-titanio-27-1000.svg"
+        },
+        {
+          "id": "willard-agm-48d",
+          "nombre": "Willard AGM Caja 48D",
+          "gama": "AGM",
+          "ah": 70,
+          "cca": 760,
+          "precio": 1125900,
+          "uso": "Vehículos modernos con frenado regenerativo",
+          "imagen": "images/baterias/willard-agm-48d.svg"
+        }
+      ],
+      "logo": "images/logos/willard.svg"
+    }
+  }
+}
