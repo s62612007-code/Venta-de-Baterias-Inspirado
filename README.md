@@ -24,7 +24,7 @@
 * **Datos:** JSON local
 * **PDF:** jsPDF
 * **Geocoding:** OpenStreetMap Nominatim
-* **Despliegue:** GitHub Pages
+* **Despliegue:** Piensa Solutions (FTP)
 
 ## 📦 Instalación y Configuración Local
 
@@ -79,10 +79,11 @@ node test-sitio.js
 
 | URL | Uso |
 |-----|-----|
-| https://hondabateriascali.com | Dominio oficial |
-| https://s62612007-code.github.io/Venta-de-Baterias-Inspirado/ | GitHub Pages |
+| https://hondabateriacali.com | Dominio oficial |
+| https://www.hondabateriacali.com | Con www |
+| https://control.hondabateriacali.com | Panel de hosting |
 
-Configuración DNS en [DOMINIO.md](DOMINIO.md).
+Subida por FTP y DNS en [DOMINIO.md](DOMINIO.md).
 
 ---
 
